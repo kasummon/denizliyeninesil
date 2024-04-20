@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}"> 
+        <link rel="stylesheet" href="{% static 'general-settings.css' %}">
+        <link rel="stylesheet" href="{% static 'media.css' %}"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&amp;display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,300;1,500&display=swap" rel="stylesheet">        <!-- One file includes all the Font Awesome Free icons and utilities -->
+        <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+        <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+    </head>
+<body>
+    
+    {% include 'navbar.html' %}
+    <div class="vh-15"></div>
+    <div class="container container-100 d-grid sec-3">
+        <div class="text-boxing container-70 p-1">
+
+            
+            <div class="text-img-holder mb-1"> <img src="{% static '404.jpg' %}" alt=""> </div>
+            
+
+            <h5 class="p-1 mb-2">Çok Uzağa Gittiniz</h5>
+            <p class="p-1 mb-2">
+                Gitmek istediğiniz yerde bir şey bulamadık. Ya da henüz oluşturmadık.
+                </p>
+        </div>
+    </div>
+
+    {% include 'footer.html' %}
+
+</body>
+</html>

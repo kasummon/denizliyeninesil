@@ -1,0 +1,171 @@
+
+<!--{% load static %} -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}"> 
+    <link rel="stylesheet" href="{% static 'general-settings.css' %}">
+    <link rel="stylesheet" href="{% static 'media.css' %}"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,300;1,500&display=swap" rel="stylesheet">        <!-- One file includes all the Font Awesome Free icons and utilities -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,300;1,500&display=swap" rel="stylesheet">
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+</head>
+<body>
+    
+    {% include 'navbar.html' %}
+
+
+    <div class="section vh-100 bg-sec-1 slider-vh">
+        <div class="slider-container">
+            <div class="slider-info">
+                <div class="slider-info-inner d-flex">
+                    <div class="slider-info-context d-flex">
+                        <div class="col-100">
+                        </div>
+                        <div class="col-100 text-container alg-cent ">
+                            <div id="text-inner-container" class="text-inner-container y-flex">                                
+                                
+                                {% for item in sliders %}
+                                <div class="text-wrapper y-flex p-2">
+                                    <div class="text-content d-flex sec-4 ml-auto text-alg-right">
+                                        <h5>{{item.title}} </h5>
+                                        <p> {{item.text}} </p>
+                                        <div class="kesfet-bt y-flex mt-2 ml-auto">
+                                            <button class="bg-pri-3 p-1 sec-1"><a href="{{item.path}}">Keşfet</a></button>
+                                        </div>
+                                    </div>
+                                </div> 
+                                {% endfor %}
+
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="slider-info-nav y-flex box-shadow">
+                        <div class="button-box left-button-box container-10">
+                            <button class="left-slide-button pri-3"><i class="fa-solid fa-chevron-left fa-xl"></i></button>
+                        </div>
+                        <div id="middle-box" class="button-box middle-button-box container-100 y-flex alg-cent just-cont">
+                          
+                        </div>
+                        <div class="button-box right-button-box container-10">
+                            <button class="right-slide-button pri-3"><i class="fa-solid fa-chevron-right fa-xl"></i></button>
+                        </div>
+                    </div>
+                </div>                    
+            </div>
+            <div class="slider-inner" id="slider-inner">
+                
+                {% for item in sliders %}
+                <div class="img-container">
+                    <img src=" {{ item.image.url }}" alt="">
+                </div> 
+                {% endfor %}       
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="section vh-50 bg-pri-3 d-grid ">
+        <div class="section container-60 d-flex sec-1 ">
+            <h4 class="mb-2 fancy text-alg-center">BİZ MUTLU ÇOCUKLAR YETİŞTİRDİK...</h4>
+            <h4 class="mb-2 fancy text-alg-center">ONLAR BAŞARILI OLDU...</h4>
+            <p class="ml-auto fancy">Yeni Nesil Eğitim ve Dayanışma Derneği</p>
+        </div>
+    </div>
+
+    <div class="section card-holder bg-sec-1">
+        <div class="card-container y-flex just-cont alg-cent m-auto">
+            
+
+            <div class="card card-3 d-flex box-shadow sec-2">
+                <div class="card-image"> <img src=" {% static 'snail.jpg' %}" alt=""> </div>
+                <div class="card-contex d-flex sec-1 bg-pri-3">
+                    <div class="card-text p-1 d-flex sec-4">
+                        <h6 class="container-90 pt-2 pb-2">Yeni Nesil Eğitim ve Dayanışma Derneği</h6>
+                        <h6>Selçukbey</h6>
+                        <br>
+                        <p class="">2011 yılından bu yana Deneğimizin amaçlarını gerçekleştirmek üzere hizmet veren binamızda Çocuklara ve kadınlara yönelik ( Halk Eğitim Müdürlüğü aracılığıyla ) kurslar verilmekte sosyal etkinlikler düzenlenmektedir.
+                             Kadınlara yönelik Kurslar: Kuran kursu Dini bilgiler kursları, dikiş kursu, İngilizce kursu, el sanatları kursları
+                            Çocuklara yönelik Kurslar: Matematik fen alanı, Türkçe ve dil alanı, kuranı kerim, İngilizce ve sanatsal etkinlik kursları açılmaktadır. Çeşitli geziler düzenlenmektedir.
+                             Yaz kursları: Yaz dönemi ilkokul – ortaokul düzeyi öğrencilere Dini bilgiler ve çeşitli kursları verilmekte, sosyal aktiviteler düzenlenmektedir.
+                            </p>
+                    </div>
+                    <div class="pri-1 bg-pri-3 ml-auto card-button "> <button class="bg-button">keşfet</button> </div>
+                </div>
+            </div>
+
+            <div class="card card-3 d-flex box-shadow sec-2">
+                <div class="card-image"> <img src=" {% static 'mandala.jpg' %}" alt=""> </div>
+                <div class="card-contex d-flex sec-1 bg-pri-3">
+                    <div class="card-text p-1 d-flex sec-3">
+                        <h6 class="container-90 pt-2 pb-2">Gündüz bakım evi</h6>
+                        <p class="">                            
+
+2014 yılında faaliyete geçen okul öncesi kurumumuz çift yönlü eğitim vermek üzere kurulmuştur. Eğitim hedefimiz Okula hazırlık derslerimizin yanında dini değerlerine sahip bir nesil yetiştirmektir. Vatanına milletine bağlı, anne babasına saygılı, sahip olduğu öz değerlerinin farkında bir nesil yetiştirmektir.  Tamgün ve yarımgün eğitimimiz vardır. 
+
+                        </p>
+                    </div>
+                    <div class="pri-1 bg-pri-3 ml-auto card-button "> <button class="bg-button">keşfet</button> </div>
+                </div>
+            </div>
+
+            <div class="card card-3 d-flex box-shadow sec-2">
+                <div class="card-image"> <img src=" {% static 'stag.jpg' %}" alt=""> </div>
+                <div class="card-contex d-flex sec-1 bg-pri-3">
+                    <div class="card-text p-1 d-flex sec-3">
+                        <h6 class="container-90 pt-2 pb-2">Yeni Nesil Deliktaş </h6>
+                        <p class="">
+                            2019 yılında faaliyete geçen binamız mahallenin pek çok ihtiyacına karşılık vermektedir. Kadınlara yönelik Kurslar çocuklara yönelik Kurslar ve çeşitli eğitim faaliyetleriyle mahalleye sosyal bir imkân sunmaktadır. Yaz dönemi Çocukların dini eğitim alacağı kurslar ve sosyal etkinlikler düzenlenmektedir.
+                            </p>
+                    </div>
+                    <div class="pri-1 bg-pri-3 ml-auto card-button "> <button class="bg-button">keşfet</button> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section d-grid">
+        <div class="section vh-50 ig-container bg-pri-3">
+            <div class="ig-container-inner y-flex just-cont alg-cent">
+                <div id="ig-left-button" class="ig-nav-button"><i class="sec-1 fa-solid fa-chevron-left fa-xl"></i></div>
+                <div  class="ig-container-capsule of-hidden">
+                    <div id="capsule" class="ig-nest y-flex just-cont alg-cent">
+                        <div class="ig-box">1</div>
+                        <div class="ig-box">2</div>
+                        <div class="ig-box">3</div>
+                        <div class="ig-box">4</div>
+                        <div class="ig-box">5</div>
+                        <div class="ig-box">6</div>
+                        <div class="ig-box">7</div>
+                        <div class="ig-box">8</div>
+                        <div class="ig-box">9</div>
+                        <div class="ig-box">10</div>
+                        <div class="ig-box">11</div>
+                        <div class="ig-box">12</div>
+                        <div class="ig-box">13</div>
+                        <div class="ig-box">14</div>
+                        <div class="ig-box">15</div>
+                    </div>
+                </div>
+                <div id="ig-right-button" class="ig-nav-button"><i class="sec-1 fa-solid fa-chevron-right fa-xl"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        {% include 'footer.html' %}
+    </footer>
+    
+    <script src=" {% static 'app.js' %} "></script>
+</body>
+</html>

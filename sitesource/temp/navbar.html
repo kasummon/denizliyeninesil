@@ -1,0 +1,187 @@
+{% load static %}
+<div class="nav-section">
+
+    <div class="dropdown bg-sec-1 d-grid">
+        <div class="dropdown-cover">
+            <div class="dropdown-item mt-1 mb-1">
+                <div class="dropdown-header y-flex">
+                    <div class="dropdown-linker bg-pri-2">
+                        <a href="{% url 'home' %}" class="p-2">Yeni Nesil Derneği</a>
+                    </div>
+                    <div class="plus pri-3 bg-pri-2 ml-1">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="dropdown-list">
+                    <ul class="d-flex">
+                            <li class="dropdown-linker mb-1"><a href="{% url 'home' %}" class="p-1">Ana Sayfa</a></li>
+                            <li class="dropdown-linker mb-1"><a href="{% url 'vizyon' %}" class="p-1">Vizyonumuz</a></li>
+                            <li class="dropdown-linker mb-1"><a href="{% url 'about' %}" class="p-1">Hakkımızda</a></li>
+                            <li class="dropdown-linker mb-1"><a href="{% url 'kurulus' %}" class="p-1">Kuruluşu</a></li>
+                            <li class="dropdown-linker mb-1"><a href="{% url 'bakim-evi' %}" class="p-1">Gündüz Bakım Evi</a></li>
+                            <li class="dropdown-linker mb-1"><a href="#" class="p-1">Foto Galeri</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown-item mt-1 mb-1">
+                <div class="dropdown-header y-flex">
+                    <div class="dropdown-linker bg-pri-2">
+                        <a href="{% url 'bakim-evi' %}" class="p-2">Gündüz Bakım Evi</a>
+                    </div>
+                    <div class="plus pri-3 bg-pri-2 ml-1">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="dropdown-list">
+                    <ul class="d-flex">
+                            <li class="dropdown-linker mb-1 mt-1"><a href="{% url 'egtvizyon' %}" class="p-1">Eğitim Vizyonumuz</a></li>
+                            <li class="dropdown-linker mb-1 mt-1"><a href="{% url 'bakim-evi'%}#yas" class="p-1">Yaş Grupları</a></li>
+                            <li class="dropdown-linker mb-1 mt-1"><a href="{% url 'yemek' %}" class="p-1">Yemek Listesi</a></li>
+                            <li class="dropdown-linker mb-1 mt-1"><a href="{% url '404' %}" class="p-1">Mezunlarımız</a></li>
+                            <li class="dropdown-linker mb-1 mt-1"><a href="{% url '404' %}" class="p-1">Gezilerimiz</a></li>
+                            <li class="dropdown-linker mb-1 mt-1"><a href="#" class="p-1">İdari Kadro</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown-item mt-1 mb-1">
+                <div class="dropdown-header y-flex">
+                    <div class="dropdown-linker bg-pri-2">
+                        <a href="{% url 'blog' %}" class="p-2">Blog</a>
+                    </div>
+                    <div class="plus pri-3 bg-pri-2 ml-1">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="dropdown-list">
+                    <ul class="d-flex">
+                        {% for item in blogcategory %}
+                            
+                            <li class="dropdown-linker mb-1 mt-1"><a href="{% url 'blogcategory' blogcategory=item.name %}" class="d-flex just-cont p-1">{{item.name}}</a></li>
+                            
+                            {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown-item mt-1 mb-1">
+                <div class="dropdown-header y-flex">
+                    <div class="dropdown-linker bg-pri-2">
+                        <a href="{% url 'home' %}" class="p-2">Kurumsal</a>
+                    </div>
+                    <div class="plus pri-3 bg-pri-2 ml-1">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="dropdown-list">
+                    <ul class="d-flex">
+                            <li class="dropdown-linker mb-1 mt-1"><a href="{% url 'iletisim' %}" class="p-1">İletişim</a></li>
+                            <li class="dropdown-linker mb-1 mt-1"><a href="{%url 'kurucular'%}" class="p-1">Kurucular</a></li>
+                            <li class="dropdown-linker mb-1 mt-1"><a href="{%url 'kurucular'%}#nuriye-aydemir" class="p-1">Nuriye Aydemir</a></li>
+                            <li class="dropdown-linker mb-1 mt-1"><a href="{%url 'kurucular'%}#hatice-yanar" class="p-1">Hatice Yanar</a></li>
+                            <li class="dropdown-linker mb-1 mt-1"><a href="{%url 'kurucular'%}#nuray-emekci" class="p-1">Nuray Emekçi</a></li>
+                            <li class="dropdown-linker mb-1 mt-1"><a href="{%url 'kurucular'%}#humeyra-mutluel" class="p-1">Hümeyra Mutluel</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+    <div class="nav-inner box-shadow bg-sec-1 pri-3">
+        <div class="navbar bg-sec-1 ">
+            
+            <div class="linker sec-3">
+                <a href="{% url 'home' %}" class="y-flex alg-cent just-cont m-auto">Yeni Nesil Derneği</a>
+                <div class="popup-nav bg-sec-1 pri-1 box-shadow pop-width-30">
+                    <div class="popup-nav-inner sec-3 container-50">
+                        <ul class="d-flex">
+                            <li class="pop-nav-li mb-1"><a href="{% url 'home' %}" class="d-flex just-cont pl-1 pr-1">Ana Sayfa</a></li>
+                            <li class="pop-nav-li mb-1"><a href="{% url 'vizyon' %}" class="d-flex just-cont pl-1 pr-1">Vizyonumuz</a></li>
+                            <li class="pop-nav-li mb-1"><a href="{% url 'about' %}" class="d-flex just-cont pl-1 pr-1">Hakkımızda</a></li>
+                            <li class="pop-nav-li mb-1"><a href="{% url 'kurulus' %}" class="d-flex just-cont pl-1 pr-1">Kuruluşu</a></li>
+                            <li class="pop-nav-li mb-1"><a href="{% url 'bakim-evi' %}" class="d-flex just-cont pl-1 pr-1">Gündüz Bakım Evi</a></li>
+                            <li class="pop-nav-li mb-1"><a href="#" class="d-flex just-cont pl-1 pr-1">Foto Galeri</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="linker sec-3">
+                <a href="{% url 'bakim-evi' %}" class="y-flex alg-cent just-cont m-auto">Gündüz Bakım Evi</a>
+                <div class="popup-nav bg-sec-1 pri-1 box-shadow pop-width-30">
+                    <div class="popup-nav-inner sec-3 container-50">
+                        <ul class="d-flex">
+                            <li class="pop-nav-li mb-1"><a href="{% url 'egtvizyon' %}" class="d-flex just-cont pl-1 pr-1">Eğitim Vizyonumuz</a></li>
+                            <li class="pop-nav-li mb-1"><a href="{% url 'bakim-evi' %}#yas" class="d-flex just-cont pl-1 pr-1">Yaş Grupları</a></li>
+                            <li class="pop-nav-li mb-1"><a href="{% url 'yemek' %}" class="d-flex just-cont pl-1 pr-1">Yemek Listesi</a></li>
+                            <li class="pop-nav-li mb-1"><a href="{% url '404' %}" class="d-flex just-cont pl-1 pr-1">Mezunlarımız</a></li>
+                            <li class="pop-nav-li mb-1"><a href="{% url '404' %}" class="d-flex just-cont pl-1 pr-1">Gezilerimiz</a></li>
+                            <li class="pop-nav-li mb-1"><a href="{% url '404' %}" class="d-flex just-cont pl-1 pr-1">İdari Kadro</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="logo-container pri-3">
+                <div class="logo-inner bg-sec-1 box-shadow">
+                    <a class="col-100 d-grid sec-2" href=" {% url 'home' %} "><img src="{% static 'logo.png' %}" alt=""></a>
+                </div>
+            </div>
+
+            
+            <div class="linker sec-3">
+                <a href="{% url 'blog' %}" class="y-flex alg-cent just-cont m-auto">Blog</a>
+                <div class="popup-nav bg-sec-1 pri-1 box-shadow pop-width-30">
+                    
+
+                    <div class="pop-nav-inner sec-3 container-50">
+                        <ul class="d-flex">
+
+                            {% for item in blogcategory %}
+                            
+                            <li class="pop-nav-li mb-1"><a href="{% url 'blogcategory' blogcategory=item.name %}" class="d-flex just-cont pl-1 pr-1">{{item.name}}</a></li>
+                            
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="linker sec-3">
+                <a href="{% url 'blog' %}" class="y-flex alg-cent just-cont m-auto">Kurumsal</a>
+                <div class="popup-nav bg-sec-1 pri-1 box-shadow">
+                    <div class="popup-nav-inner sec-3 container-100">
+                        <ul class="d-flex">
+                            <li class="pop-nav-li mb-1"><a href="{%url 'iletisim'%}" class="d-flex just-cont pl-1 pr-1">İletişim</a></li>
+                            <li class="pop-nav-li mb-1"><a href="{%url 'kurucular'%}" class="d-flex just-cont pl-1 pr-1">Kurucular</a></li>
+                            <li class="pop-nav-li mb-1"><a href="{%url 'kurucular'%}#nuriye-aydemir" class="d-flex just-cont pl-1 pr-1">Nuriye Aydemir</a></li>
+                            <li class="pop-nav-li mb-1"><a href="{%url 'kurucular'%}#hatice-yanar" class="d-flex just-cont pl-1 pr-1">Hatice Yanar</a></li>
+                            <li class="pop-nav-li mb-1"><a href="{%url 'kurucular'%}#nuray-emekci" class="d-flex just-cont pl-1 pr-1">Nuray Emekçi</a></li>
+                            <li class="pop-nav-li mb-1"><a href="{%url 'kurucular'%}#humeyra-mutluel" class="d-flex just-cont pl-1 pr-1">Hümeyra Mutluel</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ham-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            
+
+        </div>
+    </div>
+</div>
+
+<script src=" {% static 'navbar.js' %} "></script>

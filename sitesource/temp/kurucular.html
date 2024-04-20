@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}"> 
+        <link rel="stylesheet" href="{% static 'general-settings.css' %}">
+        <link rel="stylesheet" href="{% static 'media.css' %}"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&amp;display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,300;1,500&display=swap" rel="stylesheet">        <!-- One file includes all the Font Awesome Free icons and utilities -->
+        <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+        <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+    </head>
+<body>
+    
+    {% include 'navbar.html' %}
+    <div class="vh-15"></div>
+    <div class="container container-100 d-grid sec-3">
+        <div class="text-boxing container-70 p-1">
+
+            <div class="y-flex" id="nuriye-aydemir">
+                
+                <div class="kur-img-holder mb-1"> <img src="{% static 'mandala.jpg' %}" alt=""> </div>
+                <h5 class="p-1 mb-2 kur-text ml-auto">Nuriye Aydemir</h5>
+
+            </div>
+
+            <p class="p-1 mb-2">Dernek Başkanı 
+                Nuriye Aydemir 1974 yılında Almanya’da doğdu. Dokuz yaşında ailesiyle birlikte Denizli’ye dönen Nuriye Aydemir 1992 Denizli İmam hatip lisesi mezunudur.  Anadolu üniversitesi Sosyoloji bölümü ve Atatürk Üniversitesi Çocuk Gelişimi bölümü mezunudur. 
+               Yeni Nesil Eğitim Ve dayanışma Derneği’nin 2008 yılında kuruluşundan bu yana başkanlığını sürdüren Nuriye Aydemir, en önemli önceliğinin milli birlik ve beraberliğimizi güçlendirmek, öz değerlerine sahip bireyler yetiştirmek,  kadın ve çocuklara yönelik kültürel faaliyetler düzenlemek için yeni projeler geliştirmek olduğunu belirtmektedir. 
+            </p>
+        </div>
+    </div>
+
+    <div class="container container-100 d-grid sec-3">
+        <div class="text-boxing container-70 p-1">
+
+            <div class="y-flex" id="hatice-yanar">
+                
+                <div class="kur-img-holder mb-1"> <img src="{% static 'mandala.jpg' %}" alt=""> </div>
+                <h5 class="p-1 mb-2 kur-text ml-auto">Hatice Yanar</h5>
+
+            </div>
+
+            <p class="p-1 mb-2">Yönetim Kurulu Üyesi 
+                Hatice Yanar Denizli’de dünyaya geldi. Orta öğretimini Denizli lisesinde yaptı. Sonrasında Çocuk Gelişimi ve Sosyal hizmetler bölümünü okuyan Hatice Yanar Lisans eğitimini Sosyoloji alnında tamamladı. On beş yıldır eğitim alanında öğretmenlik ve yöneticilik görevlerini üstlendi. Teorik bilgiyi pratik ile birleştirerek mesleki alanda deneyimlerini sürekli güncellemeyi önemini vurgulayan Hatice Yanar ‘’Profesyonel Kariyerim boyunca çocukların potansiyellerini en üst seviyeye çıkarmak için çabaladım. Eğitim sürecinde çocukların bireysel ihtiyaçlarını anlamak ve onlara en uygun öğrenme ortamlarını oluşturmak benim için önemli olmuştur’’ demektedir. Hatice Yanar Derneğimizin Selçukbey temsilciliğinde çocuklar ve kadınlar için düzenlenen faaliyetleri yürütmektedir.
+                </p>
+        </div>
+    </div>
+
+    <div class="container container-100 d-grid sec-3">
+        <div class="text-boxing container-70 p-1">
+
+            <div class="y-flex " id="nuray-emekci">
+                
+                <div class="kur-img-holder mb-1"> <img src="{% static 'mandala.jpg' %}" alt=""> </div>
+                <h5 class="p-1 mb-2 kur-text ml-auto">Nuray Emekçi</h5>
+
+            </div>
+
+            <p class="p-1 mb-2">Yönetim Kurulu Üyesi 
+                Nuray Emekçi 1972 yılında Denizli’de dünya geldi. Kuran-ı kerim tahsilini Kuran Kursunda aldıktan sonra ortaokul ve liseyi Denizli İmam hatip lisesinde okudu. 1999 yılından itibaren okul öncesinde dini eğitim alanında on yıla yakın öğretmenlik yaptı. Bu süreçte kazandığı tecrübeleriyle Yeni Nesil Ertuğrul Gazi Gündüz Bakımevinin eğitim vizyonuna katkı sağlamaktadır. Yükseköğrenimini Anadolu Üniversitesi İlahiyat Bölümü ve Atatürk üniversitesi Çocuk Gelişimi alanlarında yapmıştır. Okul öncesi eğitimde ona yaşam enerjisi veren en büyük motivasyon kaynağı  cennet kokulu miniklerimizin küçücük gülümsemeleri, bitmeyen enerjileridir.  Nuray Emekçi’ye göre Teknoloji çağında teknoloji ile yönetilen bireyler değil teknolojiyi yöneten bireyler yetiştirmek önemlidir. Okul öncesi, eğitime atılan ilk adımdır ve akademik becerinin başlangıç noktasıdır. 
+                Yeni Nesil Eğitim Ve Dayanışma Derneğinin kurucu üyesidir. 
+                </p>
+        </div>
+    </div>
+
+    <div class="container container-100 d-grid sec-3">
+        <div class="kur-text text-boxing container-70 p-1">
+
+            <div class="y-flex" id="humeyra-mutluel">
+                
+                <div class="kur-img-holder mb-1"> <img src="{% static 'mandala.jpg' %}" alt=""> </div>
+                <h5 class="p-1 mb-2 kur-text ml-auto">Hümeyra Mutluel</h5>
+
+            </div>
+            
+
+            <p class="p-1 mb-2 kur-text">1982 yılında Denizli’de dünya gelen Hümeyra Mutluel eğitim hayatına Kuran’ı Kerim ve Arapça üzerine ihtisas yapmakla başladı. Kendi çocuklarının okul öncesi eğitimine başlamasıyla dini değerler ve Kuran-ı Kerim öğretmenliğine başlayan Hümeyra Mutluel sonrasında Çocuk Gelişimi bölümünü okudu. 
+                  Derneğimizin Yeni nesil Ertuğrul Gazi Gündüz Bakımevinde öğrencilerimizin yaparak yaşayarak öğrenmeleri için eğitim ve etkinlik planlamada alanında görev almaktadır. 
+                Oku öncesini öğretmenliğini tercih etmesindeki etkenin ‘Öğrencilerinin her birini nakış nakış işleyerek, bir gün hayata atıldıklarında dosdoğru tertemiz bireyler olduklarını görmek olduğunu söyleyen Hümeyra Mutluel on beş yıldan fazladır eğitimci olduğunu bir zamanların miniklerini gördüğünde ‘’iyi ki yapmışım ‘’ dediğini söyler.
+                </p>
+        </div>
+    </div>
+
+    {% include 'footer.html' %}
+
+</body>
+</html>

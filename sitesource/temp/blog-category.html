@@ -1,0 +1,25 @@
+{% load static %}
+
+{% for item in posts %}
+{% if item.active %}
+<div class="blog-container y-flex pl-1 pr-1">
+    <div class="blog-text d-flex mt-1 p-1 container-80 just-cont">
+        <!--<div class="image-box"><img src= {% if item.image %} "{{ item.image.url }}" {% else %} "" {% endif %} alt=""></div>-->
+         
+        <h6 class="container-100 mb-1">{{item.title}}</h6>
+        <p class="container-100 mb-1">{{item.summary}}</p>
+        <div class="bottom-parse y-flex">
+            <p class="container-50 m-auto text-alg-center">{{item.category}}</p>
+            <div class="container-50 y-flex just-cont alg-cent">
+                <p class="container-90 m-auto text-alg-right">{{item.writer}}</p>
+                <p class="m-auto">||</p>
+                <p class="container-90 m-auto">{{item.date}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="sec-1 blog-card-button container-20 d-grid"> <button class=""><a href="{% url 'details' category=item.category id=item.id%}">Devamını Oku</a></button> </div>
+</div>
+{% endif %}
+{% endfor %}
+
+

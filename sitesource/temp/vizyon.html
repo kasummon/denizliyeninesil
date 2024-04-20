@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}"> 
+        <link rel="stylesheet" href="{% static 'general-settings.css' %}">
+        <link rel="stylesheet" href="{% static 'media.css' %}"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&amp;display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,300;1,500&display=swap" rel="stylesheet">        <!-- One file includes all the Font Awesome Free icons and utilities -->
+        <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+        <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+    </head>
+<body>
+    
+    {% include 'navbar.html' %}
+    <div class="vh-15"></div>
+    <div class="container container-100 d-grid sec-3">
+        <div class="text-boxing container-70 p-1">
+
+            
+            <div class="text-img-holder mb-1"> <img src="{% static 'mandala.jpg' %}" alt=""> </div>
+            
+
+            <h5 class="p-1 mb-2">Vizyonumuz</h5>
+            <p class="p-1 mb-2">
+                Yeni Nesil Derneği, dini ve milli ahlaki değerlerin korunması ve yaşatılması konusunda öncü bir misyon üstlenmektedir. Vizyonumuz, toplumumuzun temel yapı taşlarını oluşturan aile, çocuk ve kadın gibi kritik alanlarda güçlü ve sağlam bir temel oluşturmaktır.
+                
+                Derneğimiz, eğitimin önemini vurgulayarak genç nesillerin nitelikli bir şekilde yetişmesini sağlamayı hedefler. Bu kapsamda, eğitimde adalet, eşitlik ve fırsat eşitliği prensiplerine dayalı bir yaklaşım benimseriz. Çünkü inanıyoruz ki, nitelikli eğitim toplumsal kalkınmanın temel taşlarından biridir.
+                
+                Yeni Nesil Derneği olarak, toplumsal sorunlara duyarlılıkla yaklaşır ve çözüm odaklı projeler geliştiririz. Toplumumuzun her kesimini kucaklayarak, her bireyin potansiyelini en üst düzeyde gerçekleştirebilmesi için çaba sarf ederiz.
+                
+                Bu doğrultuda, vizyonumuz; toplumsal dayanışma ve adalet duygularını güçlendirerek, daha yaşanabilir bir dünya için çalışmaktır. Yeni Nesil Derneği olarak, gelecek kuşaklara daha iyi bir miras bırakabilmek adına kararlılıkla ilerlemeye devam edeceğiz.
+                </p>
+        </div>
+    </div>
+
+    {% include 'footer.html' %}
+
+</body>
+</html>

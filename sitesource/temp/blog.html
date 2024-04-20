@@ -1,0 +1,74 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}"> 
+        <link rel="stylesheet" href="{% static 'general-settings.css' %}">
+        <link rel="stylesheet" href="{% static 'media.css' %}"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&amp;display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,300;1,500&display=swap" rel="stylesheet">        <!-- One file includes all the Font Awesome Free icons and utilities -->
+        <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+        <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+    </head>
+<body>
+    
+    {% include 'navbar.html' %}
+
+    <div class="vh-5"></div>
+    <div class="vh-5"></div>
+    
+    <div class="blog-outer-container y-flex m-auto">
+        
+
+        <div class="categories-container bg-sec-1 y-flex" id="categories-container">
+            <div class="categories-inner-container m-auto d-flex alg-cent just-cont">
+
+                {% for category in blogcategory %}
+                    <div class="category"><a class="d-grid" href="{% url 'blogcategory' blogcategory=category.name %}"><p> {{ category.name }} </p></a></div>
+                {% endfor %}
+
+            </div>
+            <div class="category-text-box d-grid " id="category-text-box">
+                <p class="category-text text-alg-center bg-sec-1 p-1 m-auto mt-1" id="category-text">kategoriler</p>
+            </div>
+        </div>
+
+        
+
+        <div class="blog-cover d-flex of-hidden">
+
+            <div class="blog-outer d-flex flex-wrap">
+    
+                {% include 'blog-category.html' %}
+    
+            </div>
+    
+            <div class="slider-info-nav y-flex box-shadow blog-nav">
+                <div class="button-box left-button-box container-10">
+                    <button class="left-slide-button pri-3"><i class="fa-solid fa-chevron-left fa-xl"></i></button>
+                </div>
+                <div id="middle-box" class="button-box middle-button-box container-100 y-flex alg-cent just-cont">
+                  
+                </div>
+                <div class="button-box right-button-box container-10">
+                    <button class="right-slide-button pri-3"><i class="fa-solid fa-chevron-right fa-xl"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include 'footer.html' %}
+
+    <script src=" {% static 'blog.js' %} "></script>
+</body>
+</html>
+
+
