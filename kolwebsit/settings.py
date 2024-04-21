@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sitesource',
-    'fontawesomefree',
+    #'fontawesomefree',
     'blogger',
 ]
 
@@ -132,7 +132,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 #STATIC_ROOT = [BASE_DIR / '/sitesource/temp/',]
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,'static'),
+    os.path.join(BASE_DIR,'static')
 ]
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
