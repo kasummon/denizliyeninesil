@@ -8,6 +8,11 @@
     font-family: 'Rubic', sans-serif;
   }
 
+  i {
+    width: 100%;
+    height: 100%;
+  }
+
   p{line-height: 1.5rem;}
   
   li { list-style: none; }
