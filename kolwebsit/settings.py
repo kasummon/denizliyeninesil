@@ -144,3 +144,6 @@ MEDIA_URL = '/images/'
 #STATICFILES_DIRS = [
 #    BASE_DIR / "/sitesource/temp/",
 #]
+
+
+#denemedir
