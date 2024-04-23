@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import post,categories,slider,yemeks
 from django.http import HttpResponse
+from django.utils.text import slugify
 
 catcat = categories.objects.all()
 
@@ -59,11 +60,11 @@ def blog_category(request, blogcategory):
 
 def blog_details (request,category,id):
     select_item = post.objects.get(id = id)
-
+    
     context = {'item' : select_item,
                'blogcategory' : catcat}
 
-    return render (request,'image-text.html',context)
+    return render (request,'details.html',context)
 
 def vizyon (request):
     return render(request,'vizyon.html',{'blogcategory' : catcat})
