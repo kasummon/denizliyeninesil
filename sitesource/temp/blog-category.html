@@ -17,7 +17,7 @@
             </div>
         </div>
     </div>
-    <div class="sec-1 blog-card-button container-20 d-grid"> <button class=""><a href="{% url 'details' category=item.category.slug id=item.id%}">Devamını Oku</a></button> </div>
+    <div class="sec-1 blog-card-button container-20 d-grid"> <button class=""><a href="{% url 'details' category=item.category.slug id=item.id %}">Devamını Oku</a></button> </div>
 </div>
 {% endif %}
 {% endfor %}
