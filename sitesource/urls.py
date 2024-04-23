@@ -35,4 +35,5 @@ urlpatterns = [
     path('yemek',views.yemekler,name = 'yemek'),
     path('iletisim',views.iletisim,name = 'iletisim'),
     path('kurucular',views.kurucular,name = 'kurucular'),
+    path('deneme',views.deneme,name = 'deneme'),
 ]

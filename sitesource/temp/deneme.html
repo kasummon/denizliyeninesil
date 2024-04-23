@@ -19,6 +19,8 @@
     
     {% include 'navbar.html' %}
 
+   
+
     <div class="container container-100 min-vh-100 d-grid sec-3">
         <div class="text-boxing container-70 p-1">
             <h3 class="p-1 mb-2">Lorem, ipsum dolor.</h3>
@@ -32,16 +34,11 @@
                 mollitia sapiente, quod eligendi magnam hic 
                 dolore corporis?
             </p>
-            <p class="p-1 mb-2">Lorem ipsum dolor sit amet consectetur 
-                adipisicing elit. Numquam amet fugiat neque 
-                perferendis at eos repudiandae nemo magni ab 
-                iure sunt, dolorem temporibus totam ad 
-                repellendus obcaecati doloremque exercitationem! 
-                Aperiam saepe, laborum quas et similique debitis 
-                reiciendis illo nihil tempore nulla, officiis 
-                mollitia sapiente, quod eligendi magnam hic 
-                dolore corporis?
-            </p>
+
+            {% for item in blogcategory %}
+            <h3 class="bg-deneme"> {{item.slug}} </h3>
+            {% endfor %}
+            
             <p class="p-1 mb-2">Lorem ipsum dolor sit amet consectetur 
                 adipisicing elit. Numquam amet fugiat neque 
                 perferendis at eos repudiandae nemo magni ab 

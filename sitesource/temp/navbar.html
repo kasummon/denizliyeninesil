@@ -61,7 +61,7 @@
                     <ul class="d-flex">
                         {% for item in blogcategory %}
                             
-                            <li class="dropdown-linker mb-1 mt-1"><a href="{% url 'blogcategory' blogcategory=item.name %}" class="d-flex just-cont p-1">{{item.name}}</a></li>
+                            <li class="dropdown-linker mb-1 mt-1"><a href="{% url 'blogcategory' blogcategory=item.slug %}" class="d-flex just-cont p-1">{{item.name}}</a></li>
                             
                             {% endfor %}
                     </ul>
@@ -145,7 +145,7 @@
 
                             {% for item in blogcategory %}
                             
-                            <li class="pop-nav-li mb-1"><a href="{% url 'blogcategory' blogcategory=item.name %}" class="d-flex just-cont pl-1 pr-1">{{item.name}}</a></li>
+                            <li class="pop-nav-li mb-1"><a href="{% url 'blogcategory' blogcategory=item.slug %}" class="d-flex just-cont pl-1 pr-1">{{item.name}}</a></li>
                             
                             {% endfor %}
 

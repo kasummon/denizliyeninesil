@@ -1,10 +1,14 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        {% if item.title %}
+        <title>Denizli Yeninesil || {{item.title}}</title>
+        {% else %}
+        <title>Denizli Yeninesil ||</title>
+        {% endif %}
         <link rel="stylesheet" href="{% static 'style.css' %}"> 
         <link rel="stylesheet" href="{% static 'general-settings.css' %}">
         <link rel="stylesheet" href="{% static 'media.css' %}"> 

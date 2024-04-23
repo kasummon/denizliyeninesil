@@ -44,8 +44,9 @@ def blog_category(request, blogcategory):
     #posted.exclude(categoy = category_id)
 
     #posted = post.objects.get(category = category_id)
-    select_item = categories.objects.get(name = blogcategory)
+    select_item = categories.objects.get(slug = blogcategory)
     select_id = select_item.id
+    
     categoriesAll = categories.objects.all()
 
     posted = post.objects.all().filter( category = select_id )
@@ -90,3 +91,7 @@ def iletisim (request):
 
 def kurucular (request):
     return render(request,'kurucular.html',{'blogcategory' : catcat})
+
+
+def deneme (request):
+    return render(request,'deneme.html',{'blogcategory' : catcat})

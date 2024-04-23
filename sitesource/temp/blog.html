@@ -3,11 +3,11 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Denizli Yeninesil || Blog</title>
         <link rel="stylesheet" href="{% static 'style.css' %}"> 
         <link rel="stylesheet" href="{% static 'general-settings.css' %}">
         <link rel="stylesheet" href="{% static 'media.css' %}"> 
@@ -32,7 +32,7 @@
             <div class="categories-inner-container m-auto d-flex alg-cent just-cont">
 
                 {% for category in blogcategory %}
-                    <div class="category"><a class="d-grid" href="{% url 'blogcategory' blogcategory=category.name %}"><p> {{ category.name }} </p></a></div>
+                    <div class="category"><a class="d-grid" href="{% url 'blogcategory' blogcategory=category.slug %}"><p> {{ category.name }} </p></a></div>
                 {% endfor %}
 
             </div>
