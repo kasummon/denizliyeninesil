@@ -31,7 +31,7 @@
             {% endif %}
 
             <h3 class="p-1 mb-2">{{item.title}}</h3>
-            <p class="p-1 mb-2">{{item.body}}</p>
+            <p class="p-1 mb-2">{{item.body|safe}}</p>
         </div>
     </div>
 

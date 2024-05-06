@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.text import slugify
+from tinymce import models as tinymce_models
 
 # Create your models here.
 
@@ -33,7 +34,7 @@ class post (models.Model):
     date = models.DateTimeField()
     active = models.BooleanField(default=True)
     writer = models.CharField(max_length=5000)
-    body = models.TextField(default='')
+    body = tinymce_models.HTMLField(default='')
 
 
     def __str__(self):
